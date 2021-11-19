@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+.mobile-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: none;
+}
+
+body {
+    max-width: 1500px;
+    margin: auto;
+}
+
+header {
+    padding: 0 3rem 0 5%;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.logo {
+    margin-right: 1.5rem;
+}
+
+li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+.loginRegister {
+    margin-left: auto;
+}
+
+.login-btn {
+    background: transparent;
+    margin-right: 1.5rem;
+    color: hsl(0, 0%, 56%);
+}
+
+li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 56%);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+li a:hover,
+.login-btn:hover {
+    color: black;
+}
+
+button {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    border-radius: 1.25rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.register-btn {
+    background: hsl(180, 66%, 49%);
+    color: white;
+}
+
+.register-btn:hover {
+    filter: brightness(110%);
+}
+
+main {
+    padding-left: 5%;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    order: 2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    max-width: 25rem;
+    line-height: 4rem;
+}
+
+p {
+    max-width: 25rem;
+    margin-bottom: 2rem;
+    color: hsl(0, 0%, 56%);
+}
+
+.col img {
+    width: 100%;
+    margin-left: 2rem;
+}
+
+.col-img {
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    header,
+    main {
+        padding: 0 2rem 0;
+    }
+    h1 {
+        font-size: 2rem;
+        max-width: 25rem;
+        line-height: 3rem;
+    }
+    p {
+        max-width: 15rem;
+        font-size: 0.9rem;
+    }
+    .logo {
+        margin-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .row {
+        flex-direction: column;
+    }
+    .col {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        min-height: 25rem;
+    }
+    h1 {
+        font-size: 2.8rem;
+        margin-top: 2rem;
+    }
+    p {
+        font-size: 1rem;
+        max-width: 25rem;
+        margin-top: 1rem;
+    }
+    .col-img {
+        order: 1 !important;
+    }
+    .col img {
+        position: absolute;
+        height: 100%;
+        width: 110%;
+        transform: translateX(5%);
+        margin: 0;
+        object-fit: cover;
+        object-position: left;
+    }
+    nav {
+        justify-content: space-between;
+    }
+    .icon {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .mobile-nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        background: hsl(257, 27%, 26%);
+        z-index: 100;
+        top: 100%;
+        padding: 0rem 1rem 1rem;
+        border-radius: 1rem;
+        transition: all .3s;
+        transform: scale(0);
+    }
+    ul,
+    li {
+        display: block;
+        text-align: center;
+        margin: 1rem auto;
+    }
+    li a {
+        font-size: 1.25rem;
+        color: white;
+    }
+    .loginRegister {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+    }
+    .loginRegister button {
+        margin: auto;
+        margin-bottom: 1rem;
+        color: white;
+        width: 100%;
+        max-width: 15rem;
+        font-size: 1.25rem;
+    }
+}
+
+.show {
+    transform: scale(1);
+}

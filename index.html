@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Assignment</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="./images/logo.svg" alt="" class="logo" />
+            <div class="mobile-nav">
+                <ul>
+                    <li>
+                        <a href="">Features</a>
+                    </li>
+                    <li>
+                        <a href="">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="">Resources</a>
+                    </li>
+                </ul>
+                <div class="loginRegister">
+                    <button class="login-btn">Login</button>
+                    <button class="register-btn">Sign Up</button>
+                </div>
+            </div>
+            <i class="fas fa-bars icon"></i>
+        </nav>
+    </header>
+
+    <main>
+        <div class="row">
+            <div class="col">
+                <h1>More than just shorter links</h1>
+                <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
+                <button class="register-btn">Get Started</button>
+            </div>
+            <div class="col col-img">
+                <img src="./images/illustration-working.svg" alt="">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const ham = document.querySelector('.icon')
+        const mobile = document.querySelector('.mobile-nav')
+        ham.addEventListener('click', () => {
+            mobile.classList.toggle('show')
+        })
+    </script>
+</body>
+
+</html>
